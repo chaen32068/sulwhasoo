@@ -6,7 +6,7 @@ $(function () {
 
   // nav
   const gnb = $(".gnb"); //Active
-  const gnb_menu_list = $(".nav_d1.d1_over"); //selector
+  const gnb_menu_list = $(".nav_d1.d1_Over"); //selector
   const sub_menu = $(".sub_menu"); //On
   const sub_menu_list = $(".sub_menu>ul>li"); //현재 순서값에 Over
 
@@ -14,10 +14,10 @@ $(function () {
     const idx = $(this).index();
     console.log(idx);
 
-    sub_menu_list.removeClass("over");
-    sub_menu.addClass("on");
-    sub_menu_list.eq(idx).addClass("over");
-    gnb.addClass("active");
+    sub_menu_list.removeClass("Over");
+    sub_menu.addClass("On");
+    sub_menu_list.eq(idx).addClass("Over");
+    gnb.addClass("Active");
   });
 
   sub_menu_list.mouseleave(function () {
@@ -25,10 +25,10 @@ $(function () {
   });
 
   function pc_menu_reset() {
-    sub_menu_list.removeClass("over");
+    sub_menu_list.removeClass("Over");
     sub_menu.removeClass("On");
 
-    gnb.removeClass("active");
+    gnb.removeClass("Active");
   }
 
   select_language.click(function () {
